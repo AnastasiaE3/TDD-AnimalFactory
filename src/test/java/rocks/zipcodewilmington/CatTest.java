@@ -1,9 +1,11 @@
 package rocks.zipcodewilmington;
 
+import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
 import rocks.zipcodewilmington.animals.Cat;
 
+import java.security.PublicKey;
 import java.util.Date;
 
 /**
@@ -11,11 +13,40 @@ import java.util.Date;
  */
 public class CatTest {
     // TODO - Create tests for `void setName(String name)`
+    @Test
+    public void testSetName(){
+    // Given a Cat object
+    Cat cat = new Cat("Pizda", new Date(), 1);
+    // When we set the name of the cat
+    cat.setName("Holly");
+    // Then we expect the cat's name to be updated
+    Assert.assertEquals("Holly",cat.getName());
+
+}
     // TODO - Create tests for `speak`
+    @Test
+    public void testSpeak(){
+        // Given a Cat object
+        Cat cat = new Cat("Holly", new Date(), 1);
+        //when the cat speaks
+        String sound = cat.speak();
+        //then we expect cat to meow
+        Assert.assertEquals("meow!", sound);
+
+    }
+
     // TODO - Create tests for `setBirthDate(Date birthDate)`
+
+
     // TODO - Create tests for `void eat(Food food)`
+
+
     // TODO - Create tests for `Integer getId()`
+
+
     // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
+
+
     // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
 
 
