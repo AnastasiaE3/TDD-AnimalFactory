@@ -13,4 +13,12 @@ public class Cat extends Mammal {
     public String speak() {
         return "meow!";
     }
+
+    public boolean isHungry() {
+        return false;
+    }
+
+    public boolean isEaten() {
+        return false;
+    }
 }

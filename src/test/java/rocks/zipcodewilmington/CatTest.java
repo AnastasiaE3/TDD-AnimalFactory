@@ -36,9 +36,35 @@ public class CatTest {
     }
 
     // TODO - Create tests for `setBirthDate(Date birthDate)`
+    @Test
+    public void testSetBirthDate() {
+        // given a Cat object
+        Cat cat = new Cat("Holly", new Date(), 1);
+        //when we set the bd of the cat
+        Date newDate = new Date();
+        cat.setBirthDate(newDate);
+        // then we expect the cat's bd to be updated
+        Assert.assertEquals(newDate, cat.getBirthDate());
+    }
 
 
     // TODO - Create tests for `void eat(Food food)`
+    @Test
+    public void testEat() {
+        // given a cat object
+        Cat cat = new Cat("Holly", new Date(), 1);
+        Food food = new Food("Fish");
+        //when the cat eats food
+        cat.eat(food);
+        // Then we expect the cat to be full and the food to be eaten
+        Assert.assertTrue(!cat.isHungry());
+
+
+
+
+
+
+    }
 
 
     // TODO - Create tests for `Integer getId()`
