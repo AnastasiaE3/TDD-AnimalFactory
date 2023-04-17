@@ -59,7 +59,7 @@ public class CatTest {
         Food food = new Food("Fish");
         //when the cat eats food
         cat.eat(food);
-        // Then we expect the cat to be full and the food to be eaten
+        // Then we expect the cat to be full
         Assert.assertTrue(!cat.isHungry());
     }
 

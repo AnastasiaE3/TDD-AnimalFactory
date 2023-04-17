@@ -17,8 +17,4 @@ public class Cat extends Mammal {
     public boolean isHungry() {
         return false;
     }
-
-    public boolean isEaten() {
-        return false;
-    }
 }
